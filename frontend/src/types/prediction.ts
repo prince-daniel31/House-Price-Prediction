@@ -1,0 +1,21 @@
+// Mirrors backend/app/schemas/prediction.py
+
+export type Furnishing = "Furnished" | "Semi-Furnished" | "Unfurnished";
+
+export type Transaction = "New Property" | "Resale" | "Rent/Lease" | "Other";
+
+export interface PredictionRequest {
+  location: string;
+  carpet_area_sqft: number;
+  floor_num: number;
+  bathroom: number;
+  balcony: number;
+  furnishing: Furnishing;
+  transaction: Transaction;
+  ownership: string;
+  facing: string;
+}
+
+export interface PredictionResponse {
+  predicted_price: number;
+}

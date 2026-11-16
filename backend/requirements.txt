@@ -1,0 +1,13 @@
+fastapi==0.115.6
+uvicorn[standard]==0.34.0
+pydantic==2.10.4
+pydantic-settings==2.7.1
+# NOTE: pandas / scikit-learn / joblib below are pinned to match the EXACT versions
+# used to train notebooks/house_price_model.ipynb. A pickle only loads reliably with
+# the same scikit-learn version -- if you retrain with a different version, update
+# these pins to match (check with `python -c "import sklearn; print(sklearn.__version__)"`).
+pandas==3.0.2
+scikit-learn==1.8.0
+joblib==1.5.3
+pytest==8.3.4
+httpx==0.28.1
